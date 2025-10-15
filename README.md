@@ -1,14 +1,13 @@
-[![Downloads](https://img.shields.io/npm/dt/create-r3f-app.svg?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/create-r3f-app) 
 
-[!Discord Shield]
 
-[![Discord Shield](https://img.shields.io/discord/740090768164651008?style=flat&colorA=000000&colorB=000000&label=discord&logo=discord&logoColor=ffffff)](https://discord.gg/ZZjjNvJ)
 
 [![Python]
 (https://img.shields.io/badge/python-3.8+-blue.svg)]
 (https://img.shields.io/badge/python-3.8+-blue.svg)
 
 # :computer: Sritop - A Resource monitor
+
+### A beautiful, real-time system monitoring application for your terminal - similar to BTOP/HTOP but built with Python and Textual.
 
 
 ## Setup sritop

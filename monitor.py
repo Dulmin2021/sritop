@@ -197,7 +197,7 @@ class ProcessTable(Static):
         self.update("\n".join(lines))
 
 
-class SystemMonitor(App):
+class sritop(App):
     """A Terminal System Monitor Application"""
     
     CSS = """
@@ -265,7 +265,7 @@ class SystemMonitor(App):
 
 
 if __name__ == "__main__":
-    app = SystemMonitor()
+    app = sritop()
     app.run()
 
 
