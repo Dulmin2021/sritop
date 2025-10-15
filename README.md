@@ -1,11 +1,9 @@
 
 
-
-[![Python]
-(https://img.shields.io/badge/python-3.8+-blue.svg)]
-(https://img.shields.io/badge/python-3.8+-blue.svg)
-
 # :computer: Sritop - A Resource monitor
+
+<img width="1350" height="743" alt="Screenshot from 2025-10-15 14-48-06" src="https://github.com/user-attachments/assets/35d4ff04-c577-4a78-9f19-4071c3619180" />
+
 
 ### A beautiful, real-time system monitoring application for your terminal - similar to BTOP/HTOP but built with Python and Textual.
 
@@ -96,19 +94,12 @@ echo "alias sysmon='python3 $(pwd)/monitor.py'" >> ~/.zshrc
 source ~/.zshrc
 ```
 
+
+<img width="841" height="562" alt="Screenshot from 2025-10-15 14-46-54" src="https://github.com/user-attachments/assets/be1a3c7c-7ba1-4338-886e-ef638c93d2fb" />
+
+
+
 This automatically adds the alias with the correct path!
-
-### Pros & Cons
-
-✅ **Pros:**
-- Very simple
-- Easy to modify
-- No file copying needed
-- Quick setup
-
-❌ **Cons:**
-- Requires full path
-- Only works for your user
 
 ---
 
