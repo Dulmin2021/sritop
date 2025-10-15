@@ -1,4 +1,26 @@
-# How to Save sritpop to your terminal
+[![Downloads](https://img.shields.io/npm/dt/create-r3f-app.svg?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/create-r3f-app) 
+
+[!Discord Shield]
+
+[![Discord Shield](https://img.shields.io/discord/740090768164651008?style=flat&colorA=000000&colorB=000000&label=discord&logo=discord&logoColor=ffffff)](https://discord.gg/ZZjjNvJ)
+
+[![Python]
+(https://img.shields.io/badge/python-3.8+-blue.svg)]
+(https://img.shields.io/badge/python-3.8+-blue.svg)
+
+# :computer: Sritop - A Resource monitor
+
+
+## Setup sritop
+### clone the project
+
+```bash
+git clone https://github.com/Dulmin2021/sritop.git
+cd sritop
+
+```
+
+## How to Save sritop to your terminal
 
 Complete guide to make your terminal system monitor easily accessible from your zsh shell.
 
@@ -20,6 +42,7 @@ Complete guide to make your terminal system monitor easily accessible from your 
 ## Method 1: Create an Alias (Recommended)
 
 **Best for:** Most users, quick setup, easy to manage
+
 
 ### Step-by-Step
 
@@ -148,18 +171,6 @@ cd ~
 sysmon
 ```
 
-### Pros & Cons
-
-✅ **Pros:**
-- Works like a native command
-- Clean and professional
-- No alias needed
-- Can be versioned
-
-❌ **Cons:**
-- Slightly more complex
-- Requires PATH modification
-
 ---
 
 ## Method 3: Create a Function
@@ -178,7 +189,7 @@ nano ~/.zshrc
 
 ```bash
 # Terminal System Monitor
-sysmon() {
+sritop() {
     # Save current directory
     local current_dir=$(pwd)
     
@@ -213,20 +224,9 @@ source ~/.zshrc
 #### 4. Run it
 
 ```bash
-sysmon
+sritop
 ```
 
-### Pros & Cons
-
-✅ **Pros:**
-- Handles virtual environment automatically
-- Returns to original directory
-- Can add custom logic
-- Most flexible
-
-❌ **Cons:**
-- More complex
-- Overkill for simple use
 
 ---
 
@@ -251,38 +251,24 @@ sudo apt install python3-textual python3-psutil
 #### 2. Copy script to system bin
 
 ```bash
-sudo cp ~/terminal-monitor/monitor.py /usr/local/bin/sysmon
+sudo cp ~/terminal-monitor/monitor.py /usr/local/bin/sritop
 ```
 
 #### 3. Make it executable
 
 ```bash
-sudo chmod +x /usr/local/bin/sysmon
+sudo chmod +x /usr/local/bin/sritop
 ```
 
 #### 4. Test it
 
 ```bash
-sysmon
+sritop
 ```
 
 This works for ALL users on the system!
 
-### Pros & Cons
 
-✅ **Pros:**
-- Available to all users
-- No PATH or alias needed
-- Professional installation
-- Works like native tools
-
-❌ **Cons:**
-- Requires root/sudo
-- System-wide dependencies
-- Updates need sudo
-- Can affect other users
-
----
 
 ## Bonus: Oh My Zsh Plugin
 
@@ -293,13 +279,13 @@ This works for ALL users on the system!
 #### 1. Create plugin directory
 
 ```bash
-mkdir -p ~/.oh-my-zsh/custom/plugins/sysmon
+mkdir -p ~/.oh-my-zsh/custom/plugins/sritop
 ```
 
 #### 2. Create plugin file
 
 ```bash
-nano ~/.oh-my-zsh/custom/plugins/sysmon/sysmon.plugin.zsh
+nano ~/.oh-my-zsh/custom/plugins/sysmon/sysmon.sritop.zsh
 ```
 
 #### 3. Add plugin content
@@ -309,14 +295,14 @@ nano ~/.oh-my-zsh/custom/plugins/sysmon/sysmon.plugin.zsh
 # Provides easy access to terminal system monitor
 
 # Main alias
-alias sysmon='python3 ~/terminal-monitor/monitor.py'
+alias sritop='python3 ~/sritop/monitor.py'
 
 # Alternative with sudo for full access
-alias sysmon-sudo='sudo python3 ~/terminal-monitor/monitor.py'
+alias sritop-sudo='sudo python3 ~/sritop/monitor.py'
 
 # Function version with venv support
 sysmon-venv() {
-    cd ~/terminal-monitor
+    cd ~/sritop
     source venv/bin/activate
     python3 monitor.py
     deactivate
@@ -337,7 +323,7 @@ Find the `plugins=()` line and add `sysmon`:
 plugins=(
     git
     zsh-autosuggestions
-    sysmon
+    sritop
 )
 ```
 
@@ -350,22 +336,10 @@ source ~/.zshrc
 #### 6. Use it
 
 ```bash
-sysmon              # Normal mode
-sysmon-sudo         # With sudo for all processes
-sysmon-venv         # Using virtual environment
+sritop              # Normal mode
+sritop-sudo         # With sudo for all processes
+sritop-venv         # Using virtual environment
 ```
-
-### Pros & Cons
-
-✅ **Pros:**
-- Organized and clean
-- Multiple command variants
-- Easy to share/version control
-- Follows Oh My Zsh conventions
-
-❌ **Cons:**
-- Only for Oh My Zsh users
-- More setup required
 
 ---
 
@@ -376,7 +350,7 @@ After setting up, verify everything works:
 ### Test 1: Check if command is available
 
 ```bash
-which sysmon
+which sritop
 # Should show path or alias info
 ```
 
@@ -391,21 +365,21 @@ sysmon
 ### Test 3: Check alias/function
 
 ```bash
-alias | grep sysmon
+alias | grep sritop
 # or
-type sysmon
+type sritop
 ```
 
 Expected output examples:
 ```bash
 # For alias:
-sysmon='python3 /home/username/terminal-monitor/monitor.py'
+sritop='python3 /home/username/sritop/monitor.py'
 
 # For function:
 sysmon is a shell function
 
 # For PATH method:
-sysmon is /home/username/bin/sysmon
+sysmon is /home/username/bin/sritop
 ```
 
 ---
@@ -421,7 +395,7 @@ source ~/.zshrc
 
 **Solution 2:** Check if alias exists
 ```bash
-cat ~/.zshrc | grep sysmon
+cat ~/.zshrc | grep sritop
 ```
 
 **Solution 3:** Start a new terminal session
@@ -433,16 +407,16 @@ exec zsh
 
 **Solution:** Make script executable
 ```bash
-chmod +x ~/terminal-monitor/monitor.py
+chmod +x ~/sritop/monitor.py
 # or
-chmod +x ~/bin/sysmon
+chmod +x ~/bin/sritop
 ```
 
 ### Issue: "No module named 'textual'"
 
 **Solution:** Activate virtual environment or install packages
 ```bash
-cd ~/terminal-monitor
+cd ~/sritop
 source venv/bin/activate
 # or
 pip install textual psutil
@@ -497,7 +471,7 @@ source ~/.zshrc
 
 ```bash
 # Remove the script
-rm ~/bin/sysmon
+rm ~/bin/sritop
 
 # Optionally remove from PATH in ~/.zshrc
 nano ~/.zshrc
@@ -510,7 +484,7 @@ nano ~/.zshrc
 # Edit ~/.zshrc
 nano ~/.zshrc
 
-# Delete the entire sysmon() { ... } block
+# Delete the entire sritop() { ... } block
 # Save and exit
 
 # Reload
@@ -520,14 +494,14 @@ source ~/.zshrc
 ### Remove System-Wide Installation
 
 ```bash
-sudo rm /usr/local/bin/sysmon
+sudo rm /usr/local/bin/sritop
 ```
 
 ### Remove Oh My Zsh Plugin
 
 ```bash
 # Remove plugin directory
-rm -rf ~/.oh-my-zsh/custom/plugins/sysmon
+rm -rf ~/.oh-my-zsh/custom/plugins/sritop
 
 # Edit ~/.zshrc and remove 'sysmon' from plugins array
 nano ~/.zshrc
@@ -535,67 +509,6 @@ nano ~/.zshrc
 # Reload
 source ~/.zshrc
 ```
-
----
-
-## Comparison Table
-
-| Method | Difficulty | Scope | Pros | Best For |
-|--------|-----------|-------|------|----------|
-| **Alias** | ⭐ Easy | User only | Simple, quick | Most users |
-| **PATH** | ⭐⭐ Medium | User only | Professional, clean | Power users |
-| **Function** | ⭐⭐⭐ Advanced | User only | Most flexible | Developers |
-| **System-Wide** | ⭐⭐⭐ Advanced | All users | Like native command | Servers/Multi-user |
-| **Oh My Zsh** | ⭐⭐ Medium | User only | Organized | Oh My Zsh users |
-
----
-
-## Recommended Method
-
-**For beginners:** Start with **Method 1 (Alias)**
-```bash
-echo "alias sysmon='python3 $(pwd)/monitor.py'" >> ~/.zshrc
-source ~/.zshrc
-```
-
-**For regular users:** Use **Method 2 (PATH)**
-- More professional
-- Works like native commands
-- Easy to manage
-
-**For developers:** Use **Method 3 (Function)**
-- Handles virtual environments
-- Most control and flexibility
-
----
-
-## Additional Tips
-
-### Create Multiple Aliases
-
-You can create shortcuts for different options:
-
-```bash
-# In ~/.zshrc
-alias sysmon='python3 ~/terminal-monitor/monitor.py'
-alias sysmon-sudo='sudo python3 ~/terminal-monitor/monitor.py'
-alias sysmon-update='cd ~/terminal-monitor && git pull && pip install -r requirements.txt'
-```
-
-### Auto-start on Terminal Open
-
-Add to the end of ~/.zshrc if you want it to start automatically:
-```bash
-# Auto-start system monitor (comment out if annoying)
-# sysmon
-```
-
-### Add Keyboard Shortcut
-
-In your terminal emulator settings, add a custom keyboard shortcut:
-- Command: `python3 ~/terminal-monitor/monitor.py`
-- Shortcut: `Ctrl+Alt+M` (or your preference)
-
 ---
 
 ## Support
