@@ -1,6 +1,7 @@
-
-
 # :computer: Sritop - A Resource monitor
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 
 <img width="1350" height="743" alt="Screenshot from 2025-10-15 14-48-06" src="https://github.com/user-attachments/assets/35d4ff04-c577-4a78-9f19-4071c3619180" />
 
