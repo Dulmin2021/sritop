@@ -14,6 +14,7 @@
 ```bash
 git clone https://github.com/Dulmin2021/sritop.git
 cd sritop
+pip install -r requirements.txt
 
 ```
 
@@ -62,7 +63,7 @@ nano ~/.zshrc
 
 ```bash
 # Terminal System Monitor
-alias sysmon='python3 /home/username/terminal-monitor/monitor.py'
+alias sysmon='python3 /home/username/sritop/monitor.py'
 ```
 
 Replace `/home/username/terminal-monitor` with your actual path from step 1.
