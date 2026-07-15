@@ -1,0 +1,32 @@
+Screen {
+    background: $surface;
+}
+
+#main-grid {
+    layout: grid;
+    grid-size: 2 1;
+    grid-columns: 1fr 2fr;
+    height: 100%;
+}
+
+#left-pane {
+    height: 100%;
+    border-right: solid $primary;
+}
+
+#right-pane {
+    height: 100%;
+}
+
+CPUWidget, MemoryWidget, DiskWidget, NetworkWidget {
+    height: 1fr;
+    border: round $accent;
+    padding: 1;
+    margin: 1;
+}
+
+ProcessWidget {
+    height: 100%;
+    border: round $accent;
+    margin: 1;
+}
